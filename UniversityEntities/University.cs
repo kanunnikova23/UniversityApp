@@ -1,34 +1,34 @@
 namespace UniversityEntities
 {
-public class University(string title)
-{
+    public class University(string title)
+    {
         public string Title { get; set; } = title;
-    public List<Faculty> Faculties { get; set; } = [];
-    public DateTime YearOfFoundation { get; set; }
+        public List<Faculty> Faculties { get; set; } = [];
+        public DateTime YearOfFoundation { get; set; }
 
         public override string ToString()
         {
             var result = new System.Text.StringBuilder();
-            result.AppendLine($"РЈРЅС–РІРµСЂСЃРёС‚РµС‚: {Title}");
-            result.AppendLine($"Р С–Рє Р·Р°СЃРЅСѓРІР°РЅРЅСЏ: {YearOfFoundation:yyyy}");
+            result.AppendLine($"Університет: {Title}");
+            result.AppendLine($"Рік заснування: {YearOfFoundation:yyyy}");
 
             foreach (var faculty in Faculties)
             {
-                result.AppendLine($"\nР¤Р°РєСѓР»СЊС‚РµС‚: {faculty.Title}");
-                result.AppendLine($"  РљРѕРѕСЂРґРёРЅР°С‚РѕСЂРё:");
+                result.AppendLine($"\nФакультет: {faculty.Title}");
+                result.AppendLine($"  Координатори:");
                 foreach (var coordinator in faculty.Coordinator)
                 {
-                    result.AppendLine($"    - {coordinator.FirstName} {coordinator.LastName}, Р—Рџ: {coordinator.Salary} РіСЂРЅ");
+                    result.AppendLine($"    - {coordinator.FirstName} {coordinator.LastName}, ЗП: {coordinator.Salary} грн");
                 }
 
                 foreach (var group in faculty.Groups)
                 {
-                    result.AppendLine($"\n  Р“СЂСѓРїР°: {group.Title}");
-                    result.AppendLine($"    РљРѕРѕСЂРґРёРЅР°С‚РѕСЂ: {group.Coordinator?.FirstName} {group.Coordinator?.LastName}");
-                    result.AppendLine($"    РЎС‚СѓРґРµРЅС‚Рё:");
+                    result.AppendLine($"\n  Група: {group.Title}");
+                    result.AppendLine($"    Координатор: {group.Coordinator?.FirstName} {group.Coordinator?.LastName}");
+                    result.AppendLine($"    Студенти:");
                     foreach (var student in group.Students)
                     {
-                        result.AppendLine($"      - {student.FirstName} {student.LastName}, РћС†С–РЅРєР°: {student.StudentGrade}");
+                        result.AppendLine($"      - {student.FirstName} {student.LastName}, Оцінка: {student.StudentGrade}");
                     }
                 }
             }
