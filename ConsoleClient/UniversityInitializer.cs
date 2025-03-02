@@ -15,24 +15,24 @@ namespace ConsoleClient
             // Створення студентів
             var students = new List<Student>
             {
-                new Student(Guid.NewGuid(), "Олександр", "Коваленко", new DateTime(2000, 1, 10), 90),
-                new Student(Guid.NewGuid(), "Наталія", "Шевченко", new DateTime(2001, 2, 15), 85),
-                new Student(Guid.NewGuid(), "Дмитро", "Сидоренко", new DateTime(2000, 3, 20), 88),
-                new Student(Guid.NewGuid(), "Ольга", "Мельник", new DateTime(2001, 4, 25), 92),
-                new Student(Guid.NewGuid(), "Володимир", "Гончаренко", new DateTime(2000, 5, 5), 87),
-                new Student(Guid.NewGuid(), "Юлія", "Романенко", new DateTime(2001, 6, 10), 91),
-                new Student(Guid.NewGuid(), "Максим", "Литвин", new DateTime(1999, 7, 15), 89),
-                new Student(Guid.NewGuid(), "Тетяна", "Захарова", new DateTime(2002, 8, 20), 93),
-                new Student(Guid.NewGuid(), "Олег", "Михайленко", new DateTime(2001, 9, 5), 86),
-                new Student(Guid.NewGuid(), "Ірина", "Гаврилюк", new DateTime(2000, 10, 11), 90),
-                new Student(Guid.NewGuid(), "Петро", "Кравченко", new DateTime(1999, 11, 30), 88),
-                new Student(Guid.NewGuid(), "Вікторія", "Семенюк", new DateTime(2002, 12, 25), 95),
-                new Student(Guid.NewGuid(), "Артем", "Данилюк", new DateTime(2001, 1, 7), 84),
-                new Student(Guid.NewGuid(), "Катерина", "Луценко", new DateTime(2000, 2, 14), 89),
-                new Student(Guid.NewGuid(), "Сергій", "Паламарчук", new DateTime(1999, 3, 21), 87),
-                new Student(Guid.NewGuid(), "Анна", "Дорошенко", new DateTime(2001, 4, 8), 92),
-                new Student(Guid.NewGuid(), "Ігор", "Шевчук", new DateTime(2000, 5, 19), 90),
-                new Student(Guid.NewGuid(), "Марина", "Бондаренко", new DateTime(2002, 6, 29), 94)
+                new(Guid.NewGuid(), "Олександр", "Коваленко", new DateTime(2000, 1, 10), 90),
+                new(Guid.NewGuid(), "Наталія", "Шевченко", new DateTime(2001, 2, 15), 85),
+                new(Guid.NewGuid(), "Дмитро", "Сидоренко", new DateTime(2000, 3, 20), 88),
+                new(Guid.NewGuid(), "Ольга", "Мельник", new DateTime(2001, 4, 25), 92),
+                new(Guid.NewGuid(), "Володимир", "Гончаренко", new DateTime(2000, 5, 5), 87),
+                new(Guid.NewGuid(), "Юлія", "Романенко", new DateTime(2001, 6, 10), 91),
+                new(Guid.NewGuid(), "Максим", "Литвин", new DateTime(1999, 7, 15), 89),
+                new(Guid.NewGuid(), "Тетяна", "Захарова", new DateTime(2002, 8, 20), 93),
+                new(Guid.NewGuid(), "Олег", "Михайленко", new DateTime(2001, 9, 5), 86),
+                new(Guid.NewGuid(), "Ірина", "Гаврилюк", new DateTime(2000, 10, 11), 90),
+                new(Guid.NewGuid(), "Петро", "Кравченко", new DateTime(1999, 11, 30), 88),
+                new(Guid.NewGuid(), "Вікторія", "Семенюк", new DateTime(2002, 12, 25), 95),
+                new(Guid.NewGuid(), "Артем", "Данилюк", new DateTime(2001, 1, 7), 84),
+                new(Guid.NewGuid(), "Катерина", "Луценко", new DateTime(2000, 2, 14), 89),
+                new(Guid.NewGuid(), "Сергій", "Паламарчук", new DateTime(1999, 3, 21), 87),
+                new(Guid.NewGuid(), "Анна", "Дорошенко", new DateTime(2001, 4, 8), 92),
+                new(Guid.NewGuid(), "Ігор", "Шевчук", new DateTime(2000, 5, 19), 90),
+                new(Guid.NewGuid(), "Марина", "Бондаренко", new DateTime(2002, 6, 29), 94)
             };
 
             // Створення груп
