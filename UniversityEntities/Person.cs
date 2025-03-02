@@ -1,17 +1,18 @@
-namespace UniversityEntities;
-
-public class Person
+namespace UniversityEntities
 {
-    public Guid PersonId { get; set; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public DateTime DateOfBirth { get; set; }
-    
-    protected Person(Guid personId, string firstName, string lastName, DateTime dateOfBirth)
+    public class Person
     {
-        FirstName = firstName;
-        LastName = lastName;
-        DateOfBirth = dateOfBirth;
-        PersonId = personId;
+        public Guid PersonId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public DateTime DateOfBirth { get; set; }
+    
+        protected Person(Guid personId, string firstName, string lastName, DateTime dateOfBirth)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            DateOfBirth = dateOfBirth;
+            PersonId = personId;
+        }
     }
 }

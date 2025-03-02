@@ -1,12 +1,7 @@
-namespace UniversityEntities;
-
-public class Student : Person
+namespace UniversityEntities
 {
-    public int StudentGrade { get; set; }
-    
-    protected Student(Guid personId, string firstName, string lastName, DateTime dateOfBirth, int studentGrade)
-        : base(personId, firstName, lastName, dateOfBirth)
+    public class Student(Guid personId, string firstName, string lastName, DateTime dateOfBirth, int studentGrade) : Person(personId, firstName, lastName, dateOfBirth)
     {
-        StudentGrade = studentGrade;
+        public int StudentGrade { get; set; } = studentGrade;
     }
 }

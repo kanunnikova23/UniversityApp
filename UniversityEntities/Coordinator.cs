@@ -1,12 +1,7 @@
-namespace UniversityEntities;
-
-public class Coordinator : Person
+namespace UniversityEntities
 {
-    public double Salary { get; set; }
-
-    protected Coordinator(Guid personId, string firstName, string lastName, DateTime dateOfBirth, double salary)
-        : base(personId, firstName, lastName, dateOfBirth)
+    public class Coordinator(Guid personId, string firstName, string lastName, DateTime dateOfBirth, double salary) : Person(personId, firstName, lastName, dateOfBirth)
     {
-        Salary = salary;
+        public double Salary { get; set; } = salary;
     }
 }
