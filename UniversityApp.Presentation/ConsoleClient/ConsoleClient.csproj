@@ -8,7 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\UniversityEntities\UniversityEntities.csproj" />
+      <ProjectReference Include="..\..\UniversityApp.Core\UniversityDomain\UniversityDomain.csproj" />
     </ItemGroup>
 
 </Project>
