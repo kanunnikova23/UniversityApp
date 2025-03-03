@@ -1,4 +1,4 @@
-namespace UniversityEntities
+namespace UniversityDomain
 {
     public class Person
     {

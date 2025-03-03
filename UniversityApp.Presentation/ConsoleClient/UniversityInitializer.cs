@@ -1,4 +1,4 @@
-﻿using UniversityEntities;
+﻿using UniversityDomain;
 
 namespace ConsoleClient
 {
