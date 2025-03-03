@@ -1,18 +1,10 @@
 namespace UniversityApp.UniversityDomain.Entity
 {
-    public class Person
+    public abstract class Person(Guid personId, string firstName, string lastName, DateTime dateOfBirth)
     {
-        public Guid PersonId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public DateTime DateOfBirth { get; set; }
-
-        protected Person(Guid personId, string firstName, string lastName, DateTime dateOfBirth)
-        {
-            FirstName = firstName;
-            LastName = lastName;
-            DateOfBirth = dateOfBirth;
-            PersonId = personId;
-        }
+        public Guid PersonId { get; set; } = personId;
+        public string FirstName { get; set; } = firstName;
+        public string LastName { get; set; } = lastName;
+        public DateTime DateOfBirth { get; set; } = dateOfBirth;
     }
 }
