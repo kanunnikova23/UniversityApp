@@ -1,5 +1,4 @@
 ﻿using UniversityApp.UniversityDomain.Entity;
-using UniversityDomain;
 
 namespace UniversityApp.ConsoleClient
 {
