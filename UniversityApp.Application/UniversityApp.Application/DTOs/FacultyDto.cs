@@ -1,4 +1,4 @@
-namespace UniversityDomain
+namespace UniversityApp.Application.DTOs
 {
     public class FacultyDto(string title)
     {

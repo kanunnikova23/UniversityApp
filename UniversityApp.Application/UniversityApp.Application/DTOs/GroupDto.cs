@@ -1,4 +1,4 @@
-﻿namespace UniversityDomain
+﻿namespace UniversityApp.Application.DTOs
 {
     public class GroupDto(string title, CoordinatorDto coordinator)
     {

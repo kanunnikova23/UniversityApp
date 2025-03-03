@@ -1,4 +1,4 @@
-namespace UniversityDomain
+namespace UniversityApp.UniversityDomain.Entity
 {
     public class University(string title)
     {

@@ -1,6 +1,7 @@
-﻿using UniversityDomain;
+﻿using UniversityApp.UniversityDomain.Entity;
+using UniversityDomain;
 
-namespace ConsoleClient
+namespace UniversityApp.ConsoleClient
 {
     public class UniversityInitializer
     {
@@ -53,7 +54,7 @@ namespace ConsoleClient
                 YearOfFoundation = new DateTime(1930, 11, 8), // Дата заснування ХНУРЕ
                 Faculties = [faculty1, faculty2, faculty3, faculty4]
             };
-            
+
             return university;
         }
     }
