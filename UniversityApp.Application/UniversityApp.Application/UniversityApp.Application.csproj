@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\UniversityApp.Core\UniversityApp.UniversityDomain\UniversityApp.UniversityDomain.csproj" />
+    <ProjectReference Include="..\..\UniversityApp.Infrastructure\Persistence\UniversityApp.FileRepository\UniversityApp.FileRepository.csproj" />
+  </ItemGroup>
+
 </Project>
