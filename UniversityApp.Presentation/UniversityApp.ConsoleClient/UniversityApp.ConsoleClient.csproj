@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\UniversityApp.Application\UniversityApp.Application\UniversityApp.Application.csproj" />
     <ProjectReference Include="..\..\UniversityApp.Core\UniversityApp.UniversityDomain\UniversityApp.UniversityDomain.csproj" />
   </ItemGroup>
 
