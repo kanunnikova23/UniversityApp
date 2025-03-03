@@ -3,7 +3,7 @@ namespace UniversityEntities
     public class University(string title)
     {
         public string Title { get; set; } = title;
-        public List<Faculty> Faculties { get; set; } = [];
+        public List<Faculty> Faculties { get; init; } = [];
         public DateTime YearOfFoundation { get; set; }
 
         public override string ToString()
@@ -16,7 +16,7 @@ namespace UniversityEntities
             {
                 result.AppendLine($"\nФакультет: {faculty.Title}");
                 result.AppendLine($"  Координатори:");
-                foreach (var coordinator in faculty.Coordinator)
+                foreach (var coordinator in faculty.Coordinators)
                 {
                     result.AppendLine($"    - {coordinator.FirstName} {coordinator.LastName}, ЗП: {coordinator.Salary} грн");
                 }
@@ -28,7 +28,7 @@ namespace UniversityEntities
                     result.AppendLine($"    Студенти:");
                     foreach (var student in group.Students)
                     {
-                        result.AppendLine($"      - {student.FirstName} {student.LastName}, Оцінка: {student.StudentGrade}");
+                        result.AppendLine($"      - {student.FirstName} {student.LastName}, Оцінка: {student.Grade}");
                     }
                 }
             }
