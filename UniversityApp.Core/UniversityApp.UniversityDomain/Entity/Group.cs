@@ -1,10 +1,15 @@
-﻿namespace UniversityApp.UniversityDomain.Entity
+﻿using UniversityApp.UniversityDomain.Contracts;
+
+namespace UniversityApp.UniversityDomain.Entity
 {
-    public class Group(Guid groupId, string title, Coordinator coordinator)
+    public class Group(Guid groupId, string title, Coordinator coordinator) 
+        : IIdentifiable<Guid>
     {
-        public Guid GroupId { get; set; } = groupId;
+        private Guid GroupId { get; set; } = groupId;
         public string Title { get; set; } = title;
         public List<Student> Students { get; init; } = [];
         public Coordinator? Coordinator { get; set; } = coordinator;
+        
+        Guid IIdentifiable<Guid>.EntityId => GroupId;
     }
 }

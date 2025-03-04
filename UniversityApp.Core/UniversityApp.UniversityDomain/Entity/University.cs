@@ -1,11 +1,15 @@
+using UniversityApp.UniversityDomain.Contracts;
+
 namespace UniversityApp.UniversityDomain.Entity
 {
-    public class University(Guid universityId, string title)
+    public class University(Guid universityId, string title) : IIdentifiable<Guid>
     {
-        public Guid UniversityId { get; set; } = universityId;
+        private Guid UniversityId { get; set; } = universityId;
         public string Title { get; set; } = title;
         public List<Faculty> Faculties { get; init; } = [];
         public DateTime YearOfFoundation { get; set; }
+        
+        Guid IIdentifiable<Guid>.EntityId => UniversityId;
 
         public override string ToString()
         {
