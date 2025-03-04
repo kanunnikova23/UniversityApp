@@ -1,6 +1,7 @@
 using UniversityApp.UniversityDomain.Contracts;
+using UniversityApp.UniversityDomain.ValueObjects;
 
-namespace UniversityApp.UniversityDomain.Entity
+namespace UniversityApp.UniversityDomain.Entities
 {
     public class University(Guid universityId, string title) : IIdentifiable<Guid>
     {
@@ -8,6 +9,7 @@ namespace UniversityApp.UniversityDomain.Entity
         public string Title { get; set; } = title;
         public List<Faculty> Faculties { get; init; } = [];
         public DateTime YearOfFoundation { get; set; }
+        public Address? Address { get; set; }
         
         Guid IIdentifiable<Guid>.EntityId => UniversityId;
 
@@ -23,17 +25,17 @@ namespace UniversityApp.UniversityDomain.Entity
                 result.AppendLine($"  Координатори:");
                 foreach (var coordinator in faculty.Coordinators)
                 {
-                    result.AppendLine($"    - {coordinator.FirstName} {coordinator.LastName}, ЗП: {coordinator.Salary} грн");
+                    result.AppendLine($"    - {coordinator.FullName.FirstName} {coordinator.FullName.LastName}, ЗП: {coordinator.Salary} грн");
                 }
 
                 foreach (var group in faculty.Groups)
                 {
                     result.AppendLine($"\n  Група: {group.Title}");
-                    result.AppendLine($"    Координатор: {group.Coordinator?.FirstName} {group.Coordinator?.LastName}");
+                    result.AppendLine($"    Координатор: {group.Coordinator?.FullName.FirstName} {group.Coordinator?.FullName.LastName}");
                     result.AppendLine($"    Студенти:");
                     foreach (var student in group.Students)
                     {
-                        result.AppendLine($"      - {student.FirstName} {student.LastName}, Оцінка: {student.Grade}");
+                        result.AppendLine($"      - {student.FullName.FirstName} {student.FullName.LastName}, Оцінка: {student.Grade}");
                     }
                 }
             }

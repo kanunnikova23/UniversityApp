@@ -1,6 +1,6 @@
 using UniversityApp.UniversityDomain.Contracts;
 
-namespace UniversityApp.UniversityDomain.Entity
+namespace UniversityApp.UniversityDomain.Entities
 {
     public class Faculty(Guid facultyId, string title) : IIdentifiable<Guid>
     {
