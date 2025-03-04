@@ -36,19 +36,19 @@ namespace UniversityApp.ConsoleClient
             };
 
             // Створення груп
-            var group1 = new Group("Група 1", coordinator1) { Students = students.GetRange(0, 4) };
-            var group2 = new Group("Група 2", coordinator2) { Students = students.GetRange(4, 4) };
-            var group3 = new Group("Група 3", coordinator3) { Students = students.GetRange(8, 5) };
-            var group4 = new Group("Група 4", coordinator4) { Students = students.GetRange(13, 5) };
+            var group1 = new Group(Guid.NewGuid(),"Група 1", coordinator1) { Students = students.GetRange(0, 4) };
+            var group2 = new Group(Guid.NewGuid(),"Група 2", coordinator2) { Students = students.GetRange(4, 4) };
+            var group3 = new Group(Guid.NewGuid(),"Група 3", coordinator3) { Students = students.GetRange(8, 5) };
+            var group4 = new Group(Guid.NewGuid(),"Група 4", coordinator4) { Students = students.GetRange(13, 5) };
 
             // Створення факультетів
-            var faculty1 = new Faculty("Факультет комп'ютерних наук") { Coordinators = [coordinator1, coordinator3], Groups = [group1, group3] };
-            var faculty2 = new Faculty("Факультет електроніки") { Coordinators = [coordinator2, coordinator4], Groups = [group2, group4] };
-            var faculty3 = new Faculty("Факультет інформаційних технологій") { Coordinators = [coordinator3], Groups = [group3] };
-            var faculty4 = new Faculty("Факультет телекомунікацій") { Coordinators = [coordinator4], Groups = [group4] };
+            var faculty1 = new Faculty(Guid.NewGuid(),"Факультет комп'ютерних наук") { Coordinators = [coordinator1, coordinator3], Groups = [group1, group3] };
+            var faculty2 = new Faculty(Guid.NewGuid(),"Факультет електроніки") { Coordinators = [coordinator2, coordinator4], Groups = [group2, group4] };
+            var faculty3 = new Faculty(Guid.NewGuid(),"Факультет інформаційних технологій") { Coordinators = [coordinator3], Groups = [group3] };
+            var faculty4 = new Faculty(Guid.NewGuid(),"Факультет телекомунікацій") { Coordinators = [coordinator4], Groups = [group4] };
 
             // Створення університету
-            var university = new University("ХНУРЕ")
+            var university = new University(Guid.NewGuid(),"ХНУРЕ")
             {
                 YearOfFoundation = new DateTime(1930, 11, 8), // Дата заснування ХНУРЕ
                 Faculties = [faculty1, faculty2, faculty3, faculty4]
