@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using ConsoleClient;
+using UniversityApp.ConsoleClient;
 
 Console.WriteLine("Hello, World!");
 
