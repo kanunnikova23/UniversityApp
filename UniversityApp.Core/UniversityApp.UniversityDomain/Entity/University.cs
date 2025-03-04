@@ -1,7 +1,8 @@
 namespace UniversityApp.UniversityDomain.Entity
 {
-    public class University(string title)
+    public class University(Guid universityId, string title)
     {
+        public Guid UniversityId { get; set; } = universityId;
         public string Title { get; set; } = title;
         public List<Faculty> Faculties { get; init; } = [];
         public DateTime YearOfFoundation { get; set; }
