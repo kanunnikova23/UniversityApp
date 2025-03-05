@@ -1,7 +1,7 @@
 using UniversityApp.UniversityDomain.Contracts;
 using UniversityApp.UniversityDomain.ValueObjects;
 
-namespace UniversityApp.UniversityDomain.Entities
+namespace UniversityApp.UniversityDomain.Aggregates
 {
     public class University(Guid universityId, string title) : IIdentifiable<Guid>
     {

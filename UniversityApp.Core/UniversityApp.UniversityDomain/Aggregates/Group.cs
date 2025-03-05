@@ -1,6 +1,7 @@
 ﻿using UniversityApp.UniversityDomain.Contracts;
+using UniversityApp.UniversityDomain.Entities;
 
-namespace UniversityApp.UniversityDomain.Entities
+namespace UniversityApp.UniversityDomain.Aggregates
 {
     public class Group(Guid groupId, string title, Coordinator coordinator) 
         : IIdentifiable<Guid>
