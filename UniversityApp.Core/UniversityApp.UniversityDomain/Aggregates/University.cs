@@ -13,6 +13,12 @@ namespace UniversityApp.UniversityDomain.Aggregates
         
         Guid IIdentifiable<Guid>.EntityId => UniversityId;
 
+        public void AddFaculty(Faculty faculty) => Faculties.Add(Faculties.Any(f => f.FacultyId == faculty.FacultyId) ? faculty : throw new ArgumentException("Факультет вже доданий."));
+
+        public void RemoveFaculty(Guid facultyId) => Faculties.Remove(Faculties.FirstOrDefault(f => f.FacultyId == facultyId) ?? throw new ArgumentException("Факультет не знайдено."));
+
+        public void ChangeAddress(Address? newAddress) => Address = newAddress;
+
         public override string ToString()
         {
             var result = new System.Text.StringBuilder();
