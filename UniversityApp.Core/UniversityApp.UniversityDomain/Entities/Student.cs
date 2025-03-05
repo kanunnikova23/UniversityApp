@@ -12,6 +12,5 @@ namespace UniversityApp.UniversityDomain.Entities
         Guid IIdentifiable<Guid>.EntityId => StudentId;
 
         public void ChangeGrade(int newGrade) => Grade = newGrade is < 0 or > 100 ? throw new ArgumentException("Неправильна оцінка.") : newGrade;
-        Guid IIdentifiable<Guid>.EntityId => StudentId;
     }
 }
