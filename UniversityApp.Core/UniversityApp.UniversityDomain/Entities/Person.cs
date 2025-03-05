@@ -4,14 +4,14 @@ using UniversityApp.UniversityDomain.ValueObjects;
 
 namespace UniversityApp.UniversityDomain.Entities
 {
-    public abstract class Person(Guid personId, FullName fullName, DateTime dateOfBirth, Address? address, Sex sex)
+    public abstract class Person(Guid personId, FullName fullName, DateTime dateOfBirth, Address? address, SexType sexType)
         : IIdentifiable<Guid>
     {
         public Guid PersonId { get; } = personId;
         public FullName FullName { get; private set; } = fullName;
         public DateTime DateOfBirth { get; private set; } = dateOfBirth;
         public Address? Address { get; private set; } = address;
-        public Sex Sex { get; set; } = sex;
+        public SexType Sex { get; set; } = sexType;
 
         Guid IIdentifiable<Guid>.EntityId => PersonId;
 

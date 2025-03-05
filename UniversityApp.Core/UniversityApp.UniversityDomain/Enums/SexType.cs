@@ -1,6 +1,6 @@
 ﻿namespace UniversityApp.UniversityDomain.Enums;
 
-public enum Sex
+public enum SexType
 {
     Undefined = 0,
     Male = 1,

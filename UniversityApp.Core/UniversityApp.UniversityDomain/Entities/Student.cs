@@ -4,8 +4,8 @@ using UniversityApp.UniversityDomain.ValueObjects;
 
 namespace UniversityApp.UniversityDomain.Entities
 {
-    public class Student(Guid studentId, FullName fullName, int grade, DateTime dateOfBirth, Address address, Sex sex) 
-        : Person(studentId, fullName, dateOfBirth, address, sex), IIdentifiable<Guid>
+    public class Student(Guid studentId, FullName fullName, int grade, DateTime dateOfBirth, Address address, SexType sexType) 
+        : Person(studentId, fullName, dateOfBirth, address, sexType), IIdentifiable<Guid>
     {
         public Guid StudentId { get; } = studentId;
         public int Grade { get; private set; } = grade;
