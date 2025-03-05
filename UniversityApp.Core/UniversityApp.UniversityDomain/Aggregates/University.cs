@@ -25,17 +25,17 @@ namespace UniversityApp.UniversityDomain.Entities
                 result.AppendLine($"  Координатори:");
                 foreach (var coordinator in faculty.Coordinators)
                 {
-                    result.AppendLine($"    - {coordinator.FullName.FirstName} {coordinator.FullName.LastName}, ЗП: {coordinator.Salary} грн");
+                    result.AppendLine($"    - {coordinator.GetFullName().FirstName} {coordinator.GetFullName().LastName}, ЗП: {coordinator.Salary} грн");
                 }
 
                 foreach (var group in faculty.Groups)
                 {
                     result.AppendLine($"\n  Група: {group.Title}");
-                    result.AppendLine($"    Координатор: {group.Coordinator?.FullName.FirstName} {group.Coordinator?.FullName.LastName}");
+                    result.AppendLine($"    Координатор: {(group.Coordinator?.GetFullName()).FirstName} {(group.Coordinator?.GetFullName()).LastName}");
                     result.AppendLine($"    Студенти:");
                     foreach (var student in group.Students)
                     {
-                        result.AppendLine($"      - {student.FullName.FirstName} {student.FullName.LastName}, Оцінка: {student.Grade}");
+                        result.AppendLine($"      - {student.GetFullName().FirstName} {student.GetFullName().LastName}, Оцінка: {student.Grade}");
                     }
                 }
             }
