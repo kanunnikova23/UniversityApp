@@ -5,10 +5,10 @@ namespace UniversityApp.UniversityDomain.Aggregates
 {
     public class Faculty(Guid facultyId, string title) : IIdentifiable<Guid>
     {
-        private Guid FacultyId { get; set; } = facultyId;
-        public string Title { get; set; } = title;
-        public List<Coordinator> Coordinators { get; init; } = [];
-        public List<Group> Groups { get; init; } = [];
+        public Guid FacultyId { get; } = facultyId;
+        public string Title { get; private set; } = title;
+        public List<Coordinator> Coordinators { get; } = [];
+        public List<Group> Groups { get; } = [];
         
         Guid IIdentifiable<Guid>.EntityId => FacultyId;
     }

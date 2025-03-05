@@ -6,10 +6,10 @@ namespace UniversityApp.UniversityDomain.Aggregates
     public class Group(Guid groupId, string title, Coordinator coordinator) 
         : IIdentifiable<Guid>
     {
-        private Guid GroupId { get; set; } = groupId;
-        public string Title { get; set; } = title;
-        public List<Student> Students { get; init; } = [];
-        public Coordinator? Coordinator { get; set; } = coordinator;
+        public Guid GroupId { get; } = groupId;
+        public string Title { get; private set; } = title;
+        public List<Student> Students { get; } = [];
+        public Coordinator Coordinator { get; private set; } = coordinator;
         
         Guid IIdentifiable<Guid>.EntityId => GroupId;
     }
